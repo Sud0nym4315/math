@@ -1,9 +1,11 @@
+//intellectual property of Sud0nym && Sud0nym4315
+//Creative-Commons Attribution-NonCommercial-ShareAlike 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
-//intellectual property of sud0nym. all rights reserved
 int main() {
      
      int a1; //choice between Algebra and geometry
@@ -116,7 +118,7 @@ int main() {
                                    rx1 = ry;
                                    ry1 = -rx;
                                    
-                                   printf("rotated 270 degrees about the origin, point 'a' is: (%d, %d)", rx1, ry1); //fixed
+                                   printf("rotated 270 degrees about the origin, point 'a' is: (%d, %d)", rx1, ry1); //
                                    printf("\n\n");
                                    
                                    break;
@@ -197,11 +199,11 @@ int main() {
                          }
                          break;         
                     }
-                    break;
-                    
+                    break; //this break statement acts up sometimes. It will skip over pyth_theorem entirely. need help with configuring these break statements;
                     case 3:
                          system("clear");
-                         printf(" Pythagorean Theorem");
+                         printf(" Pythagorean Theorem\n")
+                         printf(" SYNTAX: a^2 + b^2 = c^2");
                          printf("\n\n");
                          printf(" 1) find hypotenuse        2) find side");
                          printf("\n");
@@ -233,14 +235,19 @@ int main() {
                                    printf("\n");
                                    
                                    //print result
-                                   printf("a^2 + b^2 = %2.3f", &pc1);
+                                   printf("a^2 + b^2 = %f", pc1); //floating point always returns 0.000 ;  WTF with this bug??
                                    printf("\n\n");
                                    break;
                                    
                               case 2:
-                                   printf("path not programmed yet. please wait until next update.\n\n");
-                                   break;
-                              }
+                                    printf("path not programmed yet. please wait until next update.\n\n");
+                                    break;
+                                   
+                              default:
+                                    printf("Option invalid. no switch statement configured for this. Please submit issue to \nhttps://github.com/Sud0nym4315/math/issues");
+                                    break;
+                         }
+                         break; //added in recently. havent tested yet...
                     case 4:
                     printf("this formula is not programmed yet. please wait until next update.");
                          break;
@@ -248,7 +255,7 @@ int main() {
                     default:
                          printf("invalid number choice. exiting.");
                          break;
-               }
+                  }
      system("sleep 2s");
      printf("this program has ended. Goodbye!");
      system("sleep 4s");
